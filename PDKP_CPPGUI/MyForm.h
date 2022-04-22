@@ -49,6 +49,7 @@ namespace PDKPCPPGUI {
 
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::CheckBox^ checkBox1;
+	private: System::Windows::Forms::Label^ label7;
 
 
 	private:
@@ -78,6 +79,7 @@ namespace PDKPCPPGUI {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -241,11 +243,20 @@ namespace PDKPCPPGUI {
 			this->checkBox1->UseVisualStyleBackColor = false;
 			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox1_CheckedChanged);
 			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(441, 166);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(0, 24);
+			this->label7->TabIndex = 15;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1024, 618);
+			this->Controls->Add(this->label7);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label6);
@@ -303,7 +314,7 @@ private: System::Void textBox1_TextChanged(System::Object^ sender, System::Event
 
 }
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
-	MessageBox::Show("Muhammad Ilham \nMuhammad Irhamsyah", "Kelompok xx", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	MessageBox::Show("Muhammad Ilham", "Kelompok xx", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 };
 }
